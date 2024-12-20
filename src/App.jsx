@@ -3,6 +3,7 @@ import Intro from "./components/Intro";
 import { useThrottle } from "./hooks/useThrottle";
 import Meals from "./components/Meals";
 import "./App.css";
+import FondSection from "./components/FondSection";
 
 function App() {
   const sections = [
@@ -54,7 +55,10 @@ function App() {
   };
 
   return (
-    <>
+    <div className="relative">
+      <div className="absolute top-0 left-0 w-full z-50">
+        <FondSection />
+      </div>
       <div
         className="w-full"
         onWheel={handleWheel}
@@ -74,7 +78,7 @@ function App() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
