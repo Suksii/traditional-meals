@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
-import "./App.css";
-import Meals from "./components/Meals";
 import Intro from "./components/Intro";
+import { useThrottle } from "./hooks/useThrottle";
+import Meals from "./components/Meals";
+import "./App.css";
 
 function App() {
   const sections = [
@@ -36,18 +37,28 @@ function App() {
     sectionRefs.current[newIndex]?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const throttledHandleScroll = useThrottle(handleScroll, 500);
+
   const handleWheel = (e) => {
     e.preventDefault();
     if (e.deltaY > 0) {
-      handleScroll("down");
+      throttledHandleScroll("down");
     } else {
-      handleScroll("up");
+      throttledHandleScroll("up");
     }
   };
 
   return (
     <>
-      <div className="w-full" onWheel={handleWheel} tabIndex={0}>
+      <div
+        className="w-full"
+        onWheel={handleWheel}
+        tabIndex={0}
+        style={{
+          outline: "none",
+          height: "100vh",
+        }}
+      >
         {sections.map((section, index) => (
           <div
             key={section.id}
