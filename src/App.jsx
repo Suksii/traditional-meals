@@ -9,14 +9,12 @@ function App() {
     {
       id: "intro-section",
       section: <Intro />,
+      bgColor: "#ffff",
     },
     {
       id: "meal-section",
-      section: <Intro />,
-    },
-    {
-      id: "section-3",
-      section: <Intro />,
+      section: <Meals />,
+      bgColor: "#c1c1c",
     },
   ];
 
@@ -36,7 +34,7 @@ function App() {
     sectionRefs.current[newIndex]?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const throttledHandleScroll = useThrottle(handleScroll, 1000);
+  const throttledHandleScroll = useThrottle(handleScroll, 500);
 
   const handleWheel = (e) => {
     e.preventDefault();
@@ -62,17 +60,15 @@ function App() {
         onWheel={handleWheel}
         onKeyDown={handleKeyDown}
         tabIndex={0}
-        style={{
-          outline: "none",
-          height: "100vh",
-          overflow: "hidden",
-        }}
+        style={{ overflow: "hidden", outline: "none" }}
       >
         {sections.map((section, index) => (
           <div
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             id={section.id}
+            className="min-h-screen"
+            style={section.bgColor ? { backgroundColor: section.bgColor } : {}}
           >
             {section.section}
           </div>
