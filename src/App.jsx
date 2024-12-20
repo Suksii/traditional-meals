@@ -14,7 +14,6 @@ function App() {
       id: "meal-section",
       section: <Intro />,
     },
-    ,
     {
       id: "section-3",
       section: <Intro />,
@@ -37,7 +36,7 @@ function App() {
     sectionRefs.current[newIndex]?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const throttledHandleScroll = useThrottle(handleScroll, 500);
+  const throttledHandleScroll = useThrottle(handleScroll, 1000);
 
   const handleWheel = (e) => {
     e.preventDefault();
@@ -48,15 +47,25 @@ function App() {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "ArrowDown") {
+      throttledHandleScroll("down");
+    } else if (e.key === "ArrowUp") {
+      throttledHandleScroll("up");
+    }
+  };
+
   return (
     <>
       <div
         className="w-full"
         onWheel={handleWheel}
+        onKeyDown={handleKeyDown}
         tabIndex={0}
         style={{
           outline: "none",
           height: "100vh",
+          overflow: "hidden",
         }}
       >
         {sections.map((section, index) => (
