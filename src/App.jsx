@@ -26,6 +26,7 @@ import Jufke from "./assets/jufke.png";
 import Jufke1 from "./assets/jufke1.png";
 import Kacamak from "./assets/kacamak.jpg";
 import Cevap from "./assets/cevap.jpg";
+import Sac from "./assets/sac.jpg";
 
 function App() {
   const sections = [
@@ -478,6 +479,27 @@ function App() {
             alt: "Ćevap na roštilju",
             desc: "Ćevap na roštilju",
           }}
+        />
+      ),
+    },
+    {
+      id: "sac-section",
+      section: (
+        <Meals
+          title="Tradicionalna jela ispod sača"
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "Jagnjetina,  ovčetina , razne pite I mnogi načini spremanja hljebova I tjestenine se mogu peći ispod sača.  Uz tradicionalna jela planinskog kraja gdje žive Bošnjaci naići ćete na spremanje kačamka i cicvare ispod sača, a ako se odlučite nećete pogriješiti ako razne vrste mesea a poseban je ukus  krompira ispod sača.",
+            },
+            {
+              id: 2,
+              description:
+                "Važno je naglasiti da treba pratiti uopštena sadržajna  uputstva za pripremu jela ispod sača-peke te upute za čišćenje i održavanje sača. Jako je  važno odabrati sigurno mjesto za loženje vatre te zaštitu od vjetra kako bi se osigurala uspješna priprema hrane pod sačem. Nema dileme jela ispod sača su daleko ukusnija od svih jer se spremaju na gotovo prastari način.",
+            },
+          ]}
+          image={{ src: Sac, alt: "Priprema sača", desc: "Priprema sača" }}
         />
       ),
     },
