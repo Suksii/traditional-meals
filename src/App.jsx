@@ -25,6 +25,7 @@ import JardumPaprike from "./assets/jardum1.png";
 import Jufke from "./assets/jufke.png";
 import Jufke1 from "./assets/jufke1.png";
 import Kacamak from "./assets/kacamak.jpg";
+import Cevap from "./assets/cevap.jpg";
 
 function App() {
   const sections = [
@@ -452,6 +453,31 @@ function App() {
             },
           ]}
           image={{ src: Kacamak, alt: "Kačamak", desc: "Kačamak" }}
+        />
+      ),
+    },
+    {
+      id: "cevap-section",
+      section: (
+        <Meals
+          title="Ćevap"
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "Ćevap Jelo ćevap (ćevab, čebap) moglo bi se reći, osnova je bošnjačke nacionalne kuhinje kao što su čorbe, čimburi, pite i dolme, i bez njih se ne bi mogao zamisliti nijedan glavni obrok. Iako nema preciznije definicije, moglo bi se reći da se radi o jelima od mesa ili, tačnije, radi se o „na komade isječenom“ kuhanom ili dinstanom mesu sa dosta začina i umaka. U CG pravi se i veliki broj ćevapa a uglavnom recepti ovog posebnog jela čuvaju se od očiju javnosti, pa originalni recept za ćevape nije lako dobiti. ",
+            },
+            {
+              id: 2,
+              description:
+                "2 kg sitno mljevene junetine, teletine, ovčetine ili jagnjetine (najbolja kombinacija: 1,5 kg junetine ili teletine i 500 g jagnjetine ili ovčetine), 5 čehri bijelog luka, 10 g sode bikarbone, 20 g soli, 100 ml vode, 50 ml mineralne (gazirane) vode , 1-2 kašičice bibera.",
+            },
+          ]}
+          image={{
+            src: Cevap,
+            alt: "Ćevap na roštilju",
+            desc: "Ćevap na roštilju",
+          }}
         />
       ),
     },
