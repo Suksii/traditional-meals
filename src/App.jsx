@@ -162,6 +162,7 @@ function App() {
       ),
       bgColor: "#ccccc",
     },
+
     {
       id: "coffee-section",
       section: (
