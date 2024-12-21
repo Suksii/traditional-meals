@@ -1,5 +1,6 @@
 import React from "react";
-import TraditionalMeal from "../assets/traditional-meal.png"
+import TraditionalMeal from "../assets/traditional-meal.png";
+import autoprefixer from "autoprefixer";
 
 const Intro = () => {
   return (
@@ -7,7 +8,7 @@ const Intro = () => {
       className="min-h-screen bg-blue-100 w-full flex flex-col justify-center items-center bg-no-repeat bg-cover relative"
       style={{ backgroundImage: `url(${TraditionalMeal})` }}
     >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <h1 className="text-2xl md:text-3xl font-semibold text-center py-10 text-white z-10">
         Tradicijom do digitalizacije
       </h1>

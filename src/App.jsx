@@ -16,7 +16,7 @@ function App() {
     {
       id: "meal-section",
       section: <Meals />,
-      bgColor: "#ccc",
+      bgColor: "#ccccc",
     },
   ];
 
