@@ -7,6 +7,7 @@ import FondSection from "./components/FondSection";
 import FooterSection from "./components/FooterSection";
 import traditionalMeals from "./assets/traditional-meals.png";
 import Kebab from "./assets/cevapi.jpg";
+import Kahva from "./assets/coffee.jpg";
 
 function App() {
   const sections = [
@@ -88,6 +89,99 @@ function App() {
         />
       ),
       bgColor: "#ccccc",
+    },
+    {
+      id: "characteristics-section",
+      section: (
+        <Meals
+          title={"Pojedinačne i još neke karakteristike bošnjačke kuhinje"}
+          list={[
+            {
+              id: 1,
+              description:
+                "• Sofranska pečenja gotovo uvijek su punjena zelenim i drugim prilozima",
+            },
+            {
+              id: 2,
+              description:
+                "• Velika upotreba domaćih sirovina, kao slatkog kajmaka, jabuka, pekmeza, meda itd.",
+            },
+            {
+              id: 3,
+              description:
+                "• Značajno mjesto zauzima peceno meso na žaru ucijelo, ili u komadima ovo se naročito odnosi na jagnjetinu.",
+            },
+            {
+              id: 4,
+              description:
+                "• Značajno mjesto zauzima i kuhano meso ili sa povrćem.",
+            },
+            {
+              id: 5,
+              description:
+                "• Corba je u pravilu osnova ili dodatak mnogih (kuhanih) jela i. Karakeristika gustih (corbi), koje u vecini slucajeva sadrze jednu ili vise vrsta povrca i zacina, a takođe i komadice mesa. U corbi su obavezni persunovo lisce i meso. Čorbe fungiraju i kao samostalno jelo i kao SUPE, na pocetku, u sredini i na kraju obroka.",
+            },
+            {
+              id: 6,
+              description:
+                "• Znacajno mjesto u jelovniku zauzimaju pite, kako slane, tako i slatke. Obavezni su dodak svakog slozenijeg obroka u kojem je obavezno slaganje, pita i pecenja.",
+            },
+            {
+              id: 7,
+              description:
+                "• Velika je upotreba nekih dodataka u samim jelima, kao luka, persuna i drugih zacina, te masla i ukuhanog paradajza. ",
+            },
+            {
+              id: 8,
+              description:
+                "• Mnoga jela zacinjavaju se slatkim kajmakom i slatkim mlijekom te na taj nacin dobijaju poseban sos u jelima.",
+            },
+            {
+              id: 9,
+              description:
+                "• Salate imaju svoje određene specific nosti, mnogo se upotrebljava kiselo mlijeko i prilozi koji imaju funkciju salata.",
+            },
+            {
+              id: 10,
+              description:
+                "• Za razne poslastice upotrebljavaju se pekmezi , dakle, vocni seceri, s to je narocito znacajno i za ishranu savremenog covjeka.",
+            },
+            {
+              id: 11,
+              description:
+                "• U bošnjačkoj kuhinji postoji jedno zajednicko pravilo za sva jela, i to: ako vam je nesto suho , zavisno od ukusa, treba ga zaliti da bi postalo socno i meko, ili ga treba zaliti nekim prelivom (maslacem i mlijekom, povlakom i slicno) da bi postalo pihtijasto. Zalijeva se i pita (opet zavisno od ukusa) mlijekom i maslacem, povlakom i maslom. ",
+            },
+            {
+              id: 12,
+              description:
+                "• Posebnu grupu jela cini tzv. meze, koje se servira uz pice kod vecernjih sjedjeljki. Meze se moze sastojati iz obicnog priloga, kisele ili druge corbe sa komadic ima mesa te do najslozenijih dinstanih jela.",
+            },
+          ]}
+          image={Kebab}
+        />
+      ),
+      bgColor: "#ccccc",
+    },
+    {
+      id: "coffee-section",
+      section: (
+        <Meals
+          title="Bosanska kahva – nezaobilazna kod Bošnjaka u svakodnevnoj upotrebi"
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "Što se tiče pića, u životu Bošnjaka i Bosne I Crne Gore u cjelini kahva ima svoju nezamjenjivu ulogu. Vjekovima su Bošnjaci stvarali kult kahve usavršavajući mljevenje, kuhanje, služenje i pijenje kahve do najsuptilnijih detalja. Kahva je postala integralni dio svih drugih običaja, ali i samoj sebi svojstven običaj.",
+            },
+            {
+              id: 1,
+              description:
+                "Priprema kahve počinje prženjem i mljevenjem, a tek se onda kuha. Dobro samljevena kahva zaspe se u već malo zagrijanu džezvu. Ključalom vodom se zatim zalije (ali se ne prepuni), dobro promiješa i vrati na vatru da se 'digne' do vrha džezve, no ne smije prekipjeti. Nakon što kratko 'odstoji' da se slegne, ljeva se u findžane (šolje). Šećer i mlijeko se serviraju posebno i dodaju po želji.",
+            },
+          ]}
+          image={Kahva}
+        />
+      ),
     },
   ];
 
