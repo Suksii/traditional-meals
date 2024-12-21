@@ -5,6 +5,7 @@ import Meals from "./components/Meals";
 import "./App.css";
 import FondSection from "./components/FondSection";
 import FooterSection from "./components/FooterSection";
+import Kebab from "./components/Kebab";
 
 function App() {
   const sections = [
@@ -16,6 +17,11 @@ function App() {
     {
       id: "meal-section",
       section: <Meals />,
+      bgColor: "#ccccc",
+    },
+    {
+      id: "kebab-section",
+      section: <Kebab />,
       bgColor: "#ccccc",
     },
   ];

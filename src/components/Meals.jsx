@@ -3,7 +3,7 @@ import traditionalMeals from "../assets/traditional-meals.png";
 
 const Meals = () => {
   return (
-    <div className="min-h-screen flex flex-col gap-10 p-6">
+    <div className="min-h-screen flex flex-col justify-center gap-10 p-6 lg:w-3/4 mx-auto">
       <div className="flex flex-col md:flex-row items-center gap-10">
         <div className="w-full md:w-1/2">
           <img
@@ -13,7 +13,7 @@ const Meals = () => {
           />
         </div>
 
-        <div className="w-full md:w-1/2 space-y-10">
+        <div className="w-full md:w-1/2 space-y-5 md:space-y-10">
           <h1 className="text-2xl font-bold text-gray-800 mb-4">
             Specifična nota bošnjačkih jela
           </h1>
@@ -39,7 +39,7 @@ const Meals = () => {
         </div>
       </div>
 
-      <div className="space-y-10 w-full md:w-3/4 mx-auto">
+      <div className="space-y-5 md:space-y-10 w-full mx-auto">
         <p className="text-lg">
           Tradicionalno bošnjačko jelo može biti i izvorno, ali i jelo koje je
           tokom istorije došlo iz druge kulture pa se kod nas priprema na
