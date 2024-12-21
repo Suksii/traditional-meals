@@ -1,58 +1,55 @@
 import React from "react";
-import traditionalMeals from "../assets/traditional-meals.png";
 
-const Meals = () => {
+const Meals = ({ title = "", descriptions = [], image, list = [] }) => {
   return (
-    <div className="min-h-screen flex flex-col justify-center gap-10 p-6 lg:w-3/4 mx-auto">
-      <div className="flex flex-col md:flex-row items-center gap-10">
+    <div className="min-h-screen flex flex-col justify-center gap-8 p-6 lg:w-3/4 mx-auto">
+      <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="w-full md:w-1/2">
           <img
-            src={traditionalMeals}
+            src={image}
             alt="Tradicija bošnjačkih jela"
             className="w-full h-auto rounded-lg shadow-lg"
           />
         </div>
 
-        <div className="w-full md:w-1/2 space-y-5 md:space-y-10">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">
-            Specifična nota bošnjačkih jela
-          </h1>
-          <p className="text-lg">
-            Specifičnu notu bošnjačkim jelima daju i prehrambeni običaji koji
-            svoje izvorište imaju u islamu. Tako je savremena izvorna bošnjačka
-            hrana dio kulturno-istorijskog nasljeđa i mješavina je autentičnih
-            jela.
-          </p>
-          <p className="text-lg">
-            Specifičnost i vrijednost bošnjačkih jela je baš u tom orijentalnom
-            i zapadnjačkom, a i vjerskom nasljeđu. Zbog toga se danas ova
-            kuhinja puno razlikuje od arapske, austrijske, mađarske, ali i od
-            turske i arapske bez obzira što postoje jela koja potiču kako iz
-            Turske i drugih kuhinja.
-          </p>
-          <p className="text-lg">
-            Bošnjačka jela i dalje ostaju karakteristična, jer se prenose sa
-            koljena na koljeno. U kulturi ishrane, kao i prehrambenim običajima
-            se najjasnije odražavaju tragovi različitih kultura koje su se u
-            sredinama gdje žive Bošnjaci najsnažnije isprepletale.
-          </p>
+        <div
+          className={`w-full md:w-1/2 space-y-4 ${
+            descriptions.length > 0 && "md:space-y-10"
+          }`}
+        >
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">{title}</h1>
+          {descriptions &&
+            descriptions.slice(0, 3).map((description) => (
+              <p className="text-lg" key={description.id}>
+                {description.description}
+              </p>
+            ))}
+          {list &&
+            list.slice(0, 8).map((description) => (
+              <p className="text-lg" key={description.id}>
+                {description.description}
+              </p>
+            ))}
         </div>
       </div>
 
-      <div className="space-y-5 md:space-y-10 w-full mx-auto">
-        <p className="text-lg">
-          Tradicionalno bošnjačko jelo može biti i izvorno, ali i jelo koje je
-          tokom istorije došlo iz druge kulture pa se kod nas priprema na
-          poseban i specifičan način. U tradicionalnoj našoj kuhinji večera je
-          glavni obrok i po obilnostima ima sličnosti sa francuskom večerom dok
-          je ručak manje obilato jelo.
-        </p>
-        <p className="text-lg">
-          Autentični objekti u kojima se služe tradicionalna ishrana su
-          aščinice, ćevabdžinice i buregdžinice. U tradicionalnoj bošnjačkoj
-          kuhinji koristi se i posebno suđe. Takvi su sač, peka, dagara,
-          pršulja, lonac, tepsija itd.
-        </p>
+      <div
+        className={`space-y-4 ${
+          descriptions.length > 0 ? "md:space-y-10" : "pb-10"
+        } w-full mx-auto`}
+      >
+        {descriptions &&
+          descriptions.slice(3).map((description) => (
+            <p className="text-lg" key={description.id}>
+              {description.description}
+            </p>
+          ))}
+        {list &&
+          list.slice(8).map((description) => (
+            <p className="text-lg relative" key={description.id}>
+              {description.description}
+            </p>
+          ))}
       </div>
     </div>
   );
