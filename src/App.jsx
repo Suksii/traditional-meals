@@ -23,6 +23,7 @@ import domacaLepinja from "./assets/domaca-lepinja.jpg";
 import Jardum from "./assets/jardum.png";
 import JardumPaprike from "./assets/jardum1.png";
 import Jufke from "./assets/jufke.png";
+import Jufke1 from "./assets/jufke1.png";
 
 function App() {
   const sections = [
@@ -408,6 +409,31 @@ function App() {
             src: Jufke,
             alt: "Jufke",
             desc: "Priprema Jufki",
+          }}
+        />
+      ),
+    },
+    {
+      id: "about-section",
+      section: (
+        <Meals
+          title="Rožajska kuhinja bošnjačkog življa"
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "Stariji ljudi koji su podosta svijeta obišli tvrde da nigdje nema ukusnijeg sira, mesa i mlijeka no sa Pešteri i rožajskih planina, niti ljepšega hljeba od rožajskog i novopazarskog. Turski sultan je za to čuo i neredio je pekarima da mu ispeku takav hljeb, a oni mu odgovoriše: “Čestiti care, učini da u blizini Istanbula izviru Ibar i Raška, pa će i naš hljeb biti kao rožajski i novopazarski, jer je taj ukus od vode! ",
+            },
+            {
+              id: 2,
+              description:
+                "Rožajci su tradicionalno gostoprimljiv narod, dobri i pažljivi domaćini. U prošlosti je svaka imućnija kuća imala musafirsku (gostinsku) sobu. U gostinskoj sobi niko od ukućana obično nije spavao, već je ta soba bila uredno pospremljena da u svako doba dana i noći prihvati gosta - namjernika. Po tradiciji bi se na sofru (sto za ručavanje) postavljala kašika više za mogućeg gosta, a kada bi se dočekivao gost širom bi se otvarala visoka avlijska kapija. Gost se smještao “na vrh sobe”, na najbolje i najpreglednije mjesto, i bio bi nuđen najboljom hranom i pićem koji bi se našli u kući, jer je vladalo uvjerenje da se gost ne smije pustiti da ode iz kuće gladan. Domaćin i svi ukućani bi se trudili da se gost osjeća prijatno “kao kod svoje kuće”.",
+            },
+          ]}
+          image={{
+            src: Jufke1,
+            alt: "Jufke sa suhim mesom",
+            desc: "Jufke sa suhim mesom",
           }}
         />
       ),
