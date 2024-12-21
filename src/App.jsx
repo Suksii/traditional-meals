@@ -24,6 +24,7 @@ import Jardum from "./assets/jardum.png";
 import JardumPaprike from "./assets/jardum1.png";
 import Jufke from "./assets/jufke.png";
 import Jufke1 from "./assets/jufke1.png";
+import Kacamak from "./assets/kacamak.jpg";
 
 function App() {
   const sections = [
@@ -435,6 +436,22 @@ function App() {
             alt: "Jufke sa suhim mesom",
             desc: "Jufke sa suhim mesom",
           }}
+        />
+      ),
+    },
+    {
+      id: "kacamak-section",
+      section: (
+        <Meals
+          title="Kačamak"
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "U provrelu vodu staviti kukuruzno brašno i posoliti po želji, zatim kuhati na jačoj vatri da kljuća pola sata. Na kraju oklagijom dobro izmiješati tako da tijesto kačamaka postane ujednačeno i meko. Kačamak se servira u tepsiji i začinjava pripremljenom smješom od pomiješanog masla i kajmaka, a uz njega se služi gusto kisjelo mlijeko.",
+            },
+          ]}
+          image={{ src: Kacamak, alt: "Kačamak", desc: "Kačamak" }}
         />
       ),
     },
