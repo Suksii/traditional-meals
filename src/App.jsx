@@ -10,6 +10,15 @@ import Kebab from "./assets/cevapi.jpg";
 import Kahva from "./assets/coffee.jpg";
 import Bakery from "./components/Bakery";
 import Soup from "./assets/supa.jpg";
+import CheesePie from "./assets/pita-sir.jpg";
+import CheesePie2 from "./assets/pita-sir2.jpg";
+import GreensPie from "./assets/pita-zelje.jpg";
+import domaceKifle from "./assets/kifle.jpg";
+import lepinjaUrerni from "./assets/lepinja-u-rerni.jpg";
+import lepinjaUrerni2 from "./assets/lepinja-u-rerni2.jpg";
+import Simit from "./assets/simit.jpg";
+import domaciHleb from "./assets/domaci-hleb.jpg";
+import domacaLepinja from "./assets/domaca-lepinja.jpg";
 
 function App() {
   const sections = [
@@ -188,7 +197,55 @@ function App() {
     },
     {
       id: "bakery-section",
-      section: <Bakery />,
+      section: (
+        <Bakery
+          title={"Hljeb, pogače, peciva"}
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "Nema ljepšeg mirisa u bošnjačkoj kuhinji od mirisa koji se širi dok se u kuhinji peče hljeb, pogače i različita peciva. Gotovo seoske i gradske sredine u Crnoj Gori imale su svoje vlas recepte i naprosto su se takmičile u postizanju ljepšeg ukusa, ugodn mirisa, mekoći, izgledu.",
+            },
+            {
+              id: 2,
+              description:
+                "Neke vrste peciva su: čurek, somun, bosman, kaplama, paklama, česnica, simit, pogače, čahije, lepinje, fodule, pit peksimeti, perece, đevreci, slani lokumi, kifle, paprnjaci, maslenice, puh – pecivo itd…",
+            },
+          ]}
+          images={[
+            {
+              image: domacaLepinja,
+              alt: "Domaća lepinja",
+              imageDesc: "",
+            },
+            {
+              Image: domaceKifle,
+              alt: "Domaće kifle",
+              imageDesc: "",
+            },
+            {
+              image: domaciHleb,
+              alt: "Domaći hleb",
+              imageDesc: "",
+            },
+            {
+              image: Simit,
+              alt: "Simit",
+              imageDesc: "",
+            },
+            {
+              image: lepinjaUrerni,
+              alt: "Lepinja u rerni",
+              imageDesc: "",
+            },
+            {
+              image: lepinjaUrerni2,
+              alt: "Lepinja u rerni ",
+              imageDesc: "",
+            },
+          ]}
+        />
+      ),
     },
     {
       id: "soup-section",
@@ -203,6 +260,38 @@ function App() {
             },
           ]}
           image={Soup}
+        />
+      ),
+    },
+    {
+      id: "bakery-section",
+      section: (
+        <Bakery
+          title={"Pite"}
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "U bošnjačkoj kuhinji pite se smatraju prelaznim jelima i prave se na 1001 način. Pite se smjenjuju s dolmama, ćevapima i sličnim jelima i neizostavne su u svakodnevnoj ishrani. Mogu biti slane, poluslane, kisele i slatke. Iako su najpoznatije burek-pite, sa sirom, zeljem, tikvom, krompriom... pite se prave, takoreći, od “svega”.",
+            },
+          ]}
+          images={[
+            {
+              image: CheesePie,
+              alt: "Pita sa sirom - sirnica",
+              imageDesc: "",
+            },
+            {
+              Image: CheesePie2,
+              alt: "Pita sa sirom - sirnica",
+              imageDesc: "",
+            },
+            {
+              image: GreensPie,
+              alt: "Pita sa zeljem - zeljanica",
+              imageDesc: "",
+            },
+          ]}
         />
       ),
     },
