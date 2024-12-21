@@ -24,7 +24,7 @@ const Intro = () => {
           upotrenu savremenih alatki ostvarivanje fundamentalnih ciljeva u
           očuvanju bošnjačkog nacionalnog identiteta. Digtalizacijom mladim
           ljudima olakšavamo pristup čime se ostvaruje cilj podizanja svijesti I
-          interesovanja ko dove populacije za ovim segmentom tradicije.
+          interesovanja kod ove populacije za ovim segmentom tradicije.
         </p>
         <p className="text-lg md:text-xl">
           Lice zaduženo u okviru ove aktivnosti je Fetahović Ernad koji je

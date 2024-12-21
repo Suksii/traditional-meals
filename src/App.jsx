@@ -4,6 +4,7 @@ import { useThrottle } from "./hooks/useThrottle";
 import Meals from "./components/Meals";
 import "./App.css";
 import FondSection from "./components/FondSection";
+import FooterSection from "./components/FooterSection";
 
 function App() {
   const sections = [
@@ -15,7 +16,7 @@ function App() {
     {
       id: "meal-section",
       section: <Meals />,
-      bgColor: "#c1c1c",
+      bgColor: "#ccc",
     },
   ];
 
@@ -58,6 +59,9 @@ function App() {
     <div className="relative">
       <div className="absolute top-0 left-0 w-full z-50">
         <FondSection />
+      </div>
+      <div className="absolute bottom-0 left-0 w-full z-50">
+        <FooterSection />
       </div>
       <div
         className="w-full"
