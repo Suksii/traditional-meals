@@ -2,7 +2,7 @@ import React from "react";
 
 const Bakery = ({ title, descriptions, images }) => {
   return (
-    <div className="min-h-screen flex flex-col justify-center gap-8 p-6 lg:w-3/4 mx-auto mb-10">
+    <div className="md:min-h-screen flex flex-col justify-center gap-8 p-6 lg:w-3/4 mx-auto mb-10">
       <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
         {title}
       </h2>

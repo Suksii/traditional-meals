@@ -22,6 +22,7 @@ import domaciHleb from "./assets/domaci-hleb.jpg";
 import domacaLepinja from "./assets/domaca-lepinja.jpg";
 import Jardum from "./assets/jardum.png";
 import JardumPaprike from "./assets/jardum1.png";
+import Jufke from "./assets/jufke.png";
 
 function App() {
   const sections = [
@@ -301,7 +302,7 @@ function App() {
               desc: "Pita sa sirom - sirnica",
             },
             {
-              Image: CheesePie2,
+              image: CheesePie2,
               alt: "Pita sa sirom - sirnica",
               desc: "Pita sa sirom - sirnica",
             },
@@ -350,6 +351,63 @@ function App() {
             src: JardumPaprike,
             alt: "Paprike u Jardumu",
             desc: "Paprike u Jardumu",
+          }}
+        />
+      ),
+    },
+    {
+      id: "jufke-section",
+      section: (
+        <Meals
+          title="Evo još nekoliko tradicionalnih jela sa istaknutim receptima bošnjačkog naroda"
+          descriptions={[
+            {
+              id: 1,
+              description: (
+                <span>
+                  <b>Priganice:</b> U mlakoj, blago posoljenoj vodi kuhati
+                  tijesto od pšeničnog brašna dok ne postane malo gušće od
+                  kašastog. U dobro ugrijano ulje u tiganju kašikom stavljati
+                  pomalo tijesta, tako da pliva u masnoći. Tijesto ne treba
+                  puštati da nadolazi. Kad priganica porumeni sa obje strane,
+                  vadi se iz tiganja i servira sa medom.
+                </span>
+              ),
+            },
+            {
+              id: 2,
+              description: (
+                <span>
+                  <b>Cicvara:</b> U rastopljeno maslo doliti duplo veću količinu
+                  tople vode, a onda sipati kukuruzno brašno i neprestano
+                  miješati kašikom dok se cicvara ne zgusne. Skuhanu cicvara
+                  služiti u tanjirima. Tarhana: U posudu staviti vodu da se
+                  grije. U tepsiji pomalo kvasiti pšenično brašno i trljati
+                  dlanom o dlan dok se ne naprave mrvice. Sitom prosijati brašno
+                  a ostatke ugrušanih mrvica iz sita sipati u vodu, dodati
+                  rastopljeno maslo, jaja i so po želji. Tarhana se kuha dok se
+                  ne zgusne i provri.
+                </span>
+              ),
+            },
+            {
+              id: 3,
+              description: (
+                <span>
+                  <b>Popara sa sirom:</b> Komadiće dobro skorelog hljeba ubaciti
+                  na kratko u posudu sa vrelom vodom da se omekšaju i odmah
+                  procijediti, tako da sva voda istekne. Poparu začiniti
+                  istopljenim maslom u koji je dodat tvrdi planinski sir. Služi
+                  se sa kisjelim mlijekom. Tajna dobre popare je u tome što
+                  komadiće hljeba ne treba previše izlagati dejstvu vrele vode.
+                </span>
+              ),
+            },
+          ]}
+          image={{
+            src: Jufke,
+            alt: "Jufke",
+            desc: "Priprema Jufki",
           }}
         />
       ),
@@ -411,7 +469,7 @@ function App() {
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             id={section.id}
-            className="min-h-screen"
+            className="md:min-h-screen"
             style={section.bgColor ? { backgroundColor: section.bgColor } : {}}
           >
             {section.section}

@@ -2,7 +2,7 @@ import React from "react";
 
 const Meals = ({ title = "", descriptions = [], image, list = [] }) => {
   return (
-    <div className="min-h-screen flex flex-col justify-center gap-8 p-6 lg:w-3/4 mx-auto">
+    <div className="md:min-h-screen flex flex-col justify-center gap-8 p-6 lg:w-3/4 mx-auto">
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="w-full md:w-1/2">
           <img
