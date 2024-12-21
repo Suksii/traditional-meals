@@ -46,7 +46,7 @@ const Meals = ({ title = "", descriptions = [], image, list = [] }) => {
           ))}
         {list &&
           list.slice(8).map((description) => (
-            <p className="text-lg relative" key={description.id}>
+            <p className="text-lg" key={description.id}>
               {description.description}
             </p>
           ))}

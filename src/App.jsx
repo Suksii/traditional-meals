@@ -8,6 +8,7 @@ import FooterSection from "./components/FooterSection";
 import traditionalMeals from "./assets/traditional-meals.png";
 import Kebab from "./assets/cevapi.jpg";
 import Kahva from "./assets/coffee.jpg";
+import Bakery from "./components/Bakery";
 
 function App() {
   const sections = [
@@ -183,6 +184,10 @@ function App() {
           image={Kahva}
         />
       ),
+    },
+    {
+      id: "bakery-section",
+      section: <Bakery />,
     },
   ];
 
