@@ -9,6 +9,7 @@ import traditionalMeals from "./assets/traditional-meals.png";
 import Kebab from "./assets/cevapi.jpg";
 import Kahva from "./assets/coffee.jpg";
 import Bakery from "./components/Bakery";
+import Soup from "./assets/supa.jpg";
 
 function App() {
   const sections = [
@@ -188,6 +189,22 @@ function App() {
     {
       id: "bakery-section",
       section: <Bakery />,
+    },
+    {
+      id: "soup-section",
+      section: (
+        <Meals
+          title="Čorbe"
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "Čorbe u svakodnevnoj tradicionalnoj ishrani Bošnjaka, čorbe zauzimaju značajno mjesto. Za razliku od blagih supa, obično se prave jače začinjene, s više masnoće, guste i hranjive, najčešće sa mesom ili sa jačim dodacima, kao što su povrće, tjestenina, jaja i slično. Iako se obavezno jedu uz glavno jelo, prije ili poslije glavnog jela , čorbe egzistiraju i kao samostalna jela, koja se uzimaju za doručak. Tada se, po pravilu, stavljaju  nagusto, od komadića mesa, priređene na mnogobrojne načine: s telećim goveđim, jagnjećim ili kokošijim mesom izmiješanim s bamijom i povrćem, tjesteninom i rižom i obavezno začinjenim raznim mirođijama i uzavrelim mladim maslom.",
+            },
+          ]}
+          image={Soup}
+        />
+      ),
     },
   ];
 
