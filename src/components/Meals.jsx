@@ -6,8 +6,8 @@ const Meals = ({ title = "", descriptions = [], image, list = [] }) => {
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="w-full md:w-1/2">
           <img
-            src={image}
-            alt="Tradicija bošnjačkih jela"
+            src={image.src}
+            alt={image.alt}
             className="w-full h-auto rounded-lg shadow-lg"
           />
         </div>

@@ -10,6 +10,7 @@ import Kebab from "./assets/cevapi.jpg";
 import Kahva from "./assets/coffee.jpg";
 import Bakery from "./components/Bakery";
 import Soup from "./assets/supa.jpg";
+import Sofra from "./assets/sofra.jpg";
 import CheesePie from "./assets/pita-sir.jpg";
 import CheesePie2 from "./assets/pita-sir2.jpg";
 import GreensPie from "./assets/pita-zelje.jpg";
@@ -19,6 +20,8 @@ import lepinjaUrerni2 from "./assets/lepinja-u-rerni2.jpg";
 import Simit from "./assets/simit.jpg";
 import domaciHleb from "./assets/domaci-hleb.jpg";
 import domacaLepinja from "./assets/domaca-lepinja.jpg";
+import Jardum from "./assets/jardum.png";
+import JardumPaprike from "./assets/jardum1.png";
 
 function App() {
   const sections = [
@@ -59,7 +62,11 @@ function App() {
                 "Autentični objekti u kojima se služe tradicionalna ishrana su aščinice, ćevabdžinice i buregdžinice. U tradicionalnoj bošnjačkoj kuhinji koristi se i posebno suđe. Takvi su sač, peka, dagara, pršulja, lonac, tepsija itd.",
             },
           ]}
-          image={traditionalMeals}
+          image={{
+            src: traditionalMeals,
+            alt: "Jela iz bošnjačke kuhinje",
+            desc: "Jela iz bošnjačke kuhinje",
+          }}
         />
       ),
       bgColor: "#ccccc",
@@ -96,7 +103,11 @@ function App() {
                 "Riječ je o ćevapima, deliciji sačinjenoj od više vrsta mljevenoga mesa, najčešće posluženom s lukom i uz posebnu vrstu hljeba – somun. Naziv dolazi od turskog «kebapa» i danas ćevapa ima u gotovo svim balkanskim državama, ali najpoznatiji su upravo oni iz Bosne i Hercegovine.",
             },
           ]}
-          image={Kebab}
+          image={{
+            src: Kebab,
+            alt: "Ćevapi",
+            desc: "Fotografisano u jednoj od novih podgoričkih ćevabdžinica",
+          }}
         />
       ),
       bgColor: "#ccccc",
@@ -168,7 +179,11 @@ function App() {
                 "• Posebnu grupu jela cini tzv. meze, koje se servira uz pice kod vecernjih sjedjeljki. Meze se moze sastojati iz obicnog priloga, kisele ili druge corbe sa komadic ima mesa te do najslozenijih dinstanih jela.",
             },
           ]}
-          image={Kebab}
+          image={{
+            src: Sofra,
+            alt: "Bošnjačka sofra",
+            desc: "Bošnjačka sofra",
+          }}
         />
       ),
       bgColor: "#ccccc",
@@ -191,7 +206,11 @@ function App() {
                 "Priprema kahve počinje prženjem i mljevenjem, a tek se onda kuha. Dobro samljevena kahva zaspe se u već malo zagrijanu džezvu. Ključalom vodom se zatim zalije (ali se ne prepuni), dobro promiješa i vrati na vatru da se 'digne' do vrha džezve, no ne smije prekipjeti. Nakon što kratko 'odstoji' da se slegne, ljeva se u findžane (šolje). Šećer i mlijeko se serviraju posebno i dodaju po želji.",
             },
           ]}
-          image={Kahva}
+          image={{
+            src: Kahva,
+            alt: "Bosanska kahva",
+            desc: "Bosanska kahva, na slici fildžan (džezva) i šoljice",
+          }}
         />
       ),
     },
@@ -216,32 +235,32 @@ function App() {
             {
               image: domacaLepinja,
               alt: "Domaća lepinja",
-              imageDesc: "",
+              desc: "Domaća lepinja",
             },
             {
-              Image: domaceKifle,
+              image: domaceKifle,
               alt: "Domaće kifle",
-              imageDesc: "",
+              desc: "Domaće kifle",
             },
             {
               image: domaciHleb,
               alt: "Domaći hleb",
-              imageDesc: "",
+              desc: "Domaći hleb",
             },
             {
               image: Simit,
               alt: "Simit",
-              imageDesc: "",
+              desc: "Simit",
             },
             {
               image: lepinjaUrerni,
               alt: "Lepinja u rerni",
-              imageDesc: "",
+              desc: "Domaća lepinja u rerni",
             },
             {
               image: lepinjaUrerni2,
               alt: "Lepinja u rerni ",
-              imageDesc: "",
+              desc: "Domaća lepinja u rerni",
             },
           ]}
         />
@@ -259,12 +278,12 @@ function App() {
                 "Čorbe u svakodnevnoj tradicionalnoj ishrani Bošnjaka, čorbe zauzimaju značajno mjesto. Za razliku od blagih supa, obično se prave jače začinjene, s više masnoće, guste i hranjive, najčešće sa mesom ili sa jačim dodacima, kao što su povrće, tjestenina, jaja i slično. Iako se obavezno jedu uz glavno jelo, prije ili poslije glavnog jela , čorbe egzistiraju i kao samostalna jela, koja se uzimaju za doručak. Tada se, po pravilu, stavljaju  nagusto, od komadića mesa, priređene na mnogobrojne načine: s telećim goveđim, jagnjećim ili kokošijim mesom izmiješanim s bamijom i povrćem, tjesteninom i rižom i obavezno začinjenim raznim mirođijama i uzavrelim mladim maslom.",
             },
           ]}
-          image={Soup}
+          image={{ src: Soup, alt: "Begova čorba", desc: "Begova čorba" }}
         />
       ),
     },
     {
-      id: "bakery-section",
+      id: "pie-section",
       section: (
         <Bakery
           title={"Pite"}
@@ -279,19 +298,59 @@ function App() {
             {
               image: CheesePie,
               alt: "Pita sa sirom - sirnica",
-              imageDesc: "",
+              desc: "Pita sa sirom - sirnica",
             },
             {
               Image: CheesePie2,
               alt: "Pita sa sirom - sirnica",
-              imageDesc: "",
+              desc: "Pita sa sirom - sirnica",
             },
             {
               image: GreensPie,
-              alt: "Pita sa zeljem - zeljanica",
-              imageDesc: "",
+              alt: "Pita sa zeljem - zeljanuša",
+              desc: "Pita sa zeljem - zeljanuša",
             },
           ]}
+        />
+      ),
+    },
+    {
+      id: "jardum-section",
+      section: (
+        <Meals
+          title="Jardum"
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "Ovčje mlijeko posoliti po ukusu i staviti da se kuha na tihoj - umjerenoj vatri uz neprestano miješanje, dok se čitava površina ne prekrije pjenom. Tada se posuda skida sa vatre da se hladi. Ovo mlijeko je, kada se ohladi, veoma gusto i ukusno. Obično se služi na kraju jela.",
+            },
+          ]}
+          image={{
+            src: Jardum,
+            alt: "Jardum",
+            desc: "Jardum",
+          }}
+        />
+      ),
+    },
+    {
+      id: "jardum-peppers-section",
+      section: (
+        <Meals
+          title="Paprike u Jardumu"
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "Paprike oprati, izvaditi im drške i složiti ih u drvenu posudu da stoje 2-3 dana. Zatim naliti ovčju vareniku (jardum), malo posoliti i ostaviti da tako stoji 15-20 dana. Služiti tek nakon isteka tog vremena.",
+            },
+          ]}
+          image={{
+            src: JardumPaprike,
+            alt: "Paprike u Jardumu",
+            desc: "Paprike u Jardumu",
+          }}
         />
       ),
     },
