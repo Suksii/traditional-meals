@@ -13,7 +13,11 @@ const Bakery = ({ title, descriptions, images }) => {
           </p>
         ))}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-2 ${
+          images.length > 2 ? "lg:grid-cols-3" : ""
+        } gap-6`}
+      >
         {images &&
           images.map((image, index) => (
             <div key={index} className="relative">

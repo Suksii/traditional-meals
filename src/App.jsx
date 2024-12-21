@@ -27,6 +27,8 @@ import Jufke1 from "./assets/jufke1.png";
 import Kacamak from "./assets/kacamak.jpg";
 import Cevap from "./assets/cevap.jpg";
 import Sac from "./assets/sac.jpg";
+import DomaciSir from "./assets/domaci-sir.png";
+import DomaciSir1 from "./assets/domaci-sir2.png";
 
 function App() {
   const sections = [
@@ -500,6 +502,38 @@ function App() {
             },
           ]}
           image={{ src: Sac, alt: "Priprema sača", desc: "Priprema sača" }}
+        />
+      ),
+    },
+    {
+      id: "cheese-section",
+      section: (
+        <Bakery
+          title={"Prirpema sira kod sandžačkih Bošnjaka"}
+          descriptions={[
+            {
+              id: 1,
+              description:
+                "Kada pomuzu krave, procijedi mlijeko i direktno sipati maju, odnosno sirilo. To odstoji oko dva sata, sve zavisi od temperature, ako je hladno onda može malo i duže. Kad se izdvoji surutka i vidi se da je usireno, preručuje se u grudnjače. Iz njih se tokom tri-četiri sata iskapa surutka, mada nekada treba i pet sati, sve zavisi od temperature (ako temperatura nije odgovarajuća sir postaje kisio.",
+            },
+            {
+              id: 2,
+              description:
+                "Dalje, kada se sir vadi iz grudnjače, isiječe se I slaže u kante ili kace, posoli i preko njega stavi krug i kamen. Tako odstoji jedno vreme, zgorijeva, pa se spusti, onda se dokuplja i mora se redovno čistiti, priča Zorica Mahmutović.",
+            },
+          ]}
+          images={[
+            {
+              image: DomaciSir,
+              alt: "Domaći sir",
+              desc: "Domaći sir",
+            },
+            {
+              image: DomaciSir1,
+              alt: "Domaći sir, krompir, sok I razna peciva",
+              desc: "Domaći sir, krompir, sok I razna peciva",
+            },
+          ]}
         />
       ),
     },
