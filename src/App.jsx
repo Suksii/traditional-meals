@@ -29,6 +29,10 @@ import Cevap from "./assets/cevap.jpg";
 import Sac from "./assets/sac.jpg";
 import DomaciSir from "./assets/domaci-sir.png";
 import DomaciSir1 from "./assets/domaci-sir2.png";
+import Hurmasice from "./assets/hurmasice.jpg";
+import Baklave from "./assets/baklave.jpg";
+import Tolumbe from "./assets/tolumbe.jpg";
+import Halva from "./assets/halva.jpg";
 
 function App() {
   const sections = [
@@ -532,6 +536,89 @@ function App() {
               image: DomaciSir1,
               alt: "Domaći sir, krompir, sok I razna peciva",
               desc: "Domaći sir, krompir, sok I razna peciva",
+            },
+          ]}
+        />
+      ),
+    },
+    {
+      id: "sweets-section",
+      section: (
+        <Bakery
+          title={"Slatka jela kod bošnjačkog naroda"}
+          subtitle={
+            "Bošnjačka tradicionalna kuhinja obiluje slatkim jelima. Neka od njih su: "
+          }
+          list={[
+            {
+              id: 1,
+              description: "• Tufahije – kuhane jabuke punjene orasima i šlagom",
+            },
+            {
+              id: 2,
+              description:
+                "• Baklava – lisnato tijesto punjeno orasima, natopljeno šećernim sirupom ili medom",
+            },
+            {
+              id: 3,
+              description:
+                "• Ružica – slična baklavi, ali se peče u malim rolnicama",
+            },
+            {
+              id: 4,
+              description:
+                "• Hurmašica – tijesto u obliku hurme, natopljeno slatkim sirupom",
+            },
+            {
+              id: 5,
+              description: "• Sutlijaš – slatko jelo od riže",
+            },
+            {
+              id: 6,
+              description: "• Tulumbe – prženo testo zaslađeno slatkim sirupom",
+            },
+            {
+              id: 7,
+              description:
+                "• Kadaif – tanko i vlaknasto tijesto, zaslađeno slatkim sirupom",
+            },
+            {
+              id: 8,
+              description: "• Halva – slatko jelo od brašna, šećera i masnoće",
+            },
+            {
+              id: 9,
+              description: "• Jabukovača – kolač od tijesta punjenog jabukama",
+            },
+            {
+              id: 10,
+              description: "• Lokumi – suhi keks",
+            },
+            {
+              id: 11,
+              description: "• Gurabije – suhi kolači",
+            },
+          ]}
+          images={[
+            {
+              image: Halva,
+              alt: "Halva",
+              desc: "Halva",
+            },
+            {
+              image: Hurmasice,
+              alt: "Hurmašice",
+              desc: "Hurmašice",
+            },
+            {
+              image: Baklave,
+              alt: "Baklave",
+              desc: "Razne vrste baklava",
+            },
+            {
+              image: Tolumbe,
+              alt: "Tolumbe",
+              desc: "Tolumbe",
             },
           ]}
         />
