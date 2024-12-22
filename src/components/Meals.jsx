@@ -4,12 +4,16 @@ const Meals = ({ title = "", descriptions = [], image, list = [] }) => {
   return (
     <div className="md:min-h-screen flex flex-col justify-center gap-8 p-6 lg:w-3/4 mx-auto">
       <div className="flex flex-col md:flex-row items-center gap-8">
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 relative">
           <img
             src={image.src}
             alt={image.alt}
             className="w-full h-auto rounded-lg shadow-lg"
           />
+          <div className="absolute inset-0 bg-black opacity-30 hover:bg-opacity-0 rounded-lg duration-300"></div>
+          <div className="absolute bottom-0 py-2 bg-gray-600 bg-opacity-70 text-gray-50 font-semibold rounded-b-lg w-full text-center">
+            {image.desc}
+          </div>
         </div>
 
         <div

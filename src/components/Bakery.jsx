@@ -44,7 +44,10 @@ const Bakery = ({
                 alt={image.alt}
                 className="w-full h-full object-cover rounded-lg shadow-lg"
               />
-              <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+              <div className="absolute inset-0 bg-black opacity-30 hover:bg-opacity-0 rounded-lg duration-300"></div>
+              <div className="absolute bottom-0 py-2 bg-gray-600 bg-opacity-70 text-gray-50 font-semibold rounded-b-lg w-full text-center">
+                {image.desc}
+              </div>
             </div>
           ))}
       </div>
