@@ -1,12 +1,11 @@
 import React from "react";
 import TraditionalMeal from "../assets/traditional-meal.png";
-import autoprefixer from "autoprefixer";
-
+import BgImage from "../assets/bg-image.jpg";
 const Intro = () => {
   return (
     <div
       className="min-h-screen bg-blue-100 w-full flex flex-col justify-center items-center bg-no-repeat bg-cover relative"
-      style={{ backgroundImage: `url(${TraditionalMeal})` }}
+      style={{ backgroundImage: `url(${BgImage})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <h1 className="text-2xl md:text-3xl font-semibold text-center py-10 text-white z-10">

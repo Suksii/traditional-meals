@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useThrottle } from "./hooks/useThrottle";
 import "./App.css";
 import { sections } from "./constants/constants";
@@ -25,21 +25,52 @@ function App() {
   const throttledHandleScroll = useThrottle(handleScroll, 500);
 
   const handleWheel = (e) => {
+    const currentSection = sectionRefs.current[currentIndex];
+    if (!currentSection) return;
+
+    const rect = currentSection.getBoundingClientRect();
+    const isAtTop = rect.top >= 0;
+    const isAtBottom = rect.bottom <= window.innerHeight;
+
     e.preventDefault();
-    if (e.deltaY > 0) {
+    if (e.deltaY > 0 && isAtBottom) {
       throttledHandleScroll("down");
-    } else {
+    } else if (e.deltaY < 0 && isAtTop) {
       throttledHandleScroll("up");
     }
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === "ArrowDown") {
-      throttledHandleScroll("down");
-    } else if (e.key === "ArrowUp") {
-      throttledHandleScroll("up");
-    }
-  };
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const visibleIndex = sectionRefs.current.findIndex(
+            (ref) => ref === entry.target
+          );
+          if (visibleIndex !== -1) {
+            setCurrentIndex(visibleIndex);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    sectionRefs.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="relative">
@@ -50,11 +81,9 @@ function App() {
         <FooterSection />
       </div>
       <div
-        className="w-full"
+        className="w-full overflow-y-auto"
         onWheel={handleWheel}
-        onKeyDown={handleKeyDown}
         tabIndex={0}
-        style={{ overflow: "hidden", outline: "none" }}
       >
         {sections.map((section, index) => (
           <div
