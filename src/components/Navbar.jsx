@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = ({ sectionRefs, setCurrentIndex }) => {
   const navMenu = [
@@ -27,11 +28,20 @@ const Navbar = ({ sectionRefs, setCurrentIndex }) => {
     { id: "sweets-section", name: "Slatka jela kod bošnjačkog naroda" },
   ];
 
-  const [opened, setOpened] = useState(true);
+  const [opened, setOpened] = useState(false);
   const handleClick = (index) => {
     setCurrentIndex(index);
-    setOpened(true);
+    setOpened(false);
     sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: i * 0.1, duration: 0.4 },
+    }),
   };
 
   return (
@@ -40,37 +50,55 @@ const Navbar = ({ sectionRefs, setCurrentIndex }) => {
         <div
           onClick={() => setOpened((prev) => !prev)}
           className={classNames(`tham tham-e-squeeze tham-w-8`, {
-            "tham-active": !opened,
+            "tham-active": opened,
           })}
         >
           <div className="tham-box">
             <div
               className={`tham-inner ${
-                opened ? "bg-gray-900" : "bg-gray-100"
+                opened ? "bg-gray-100" : "bg-gray-900"
               } transition-colors`}
             />
           </div>
         </div>
       </nav>
-      <nav
-        className={`fixed top-0 right-0 inset-0 z-[50] bg-gray-800 text-white ${
-          opened ? "translate-x-full opacity-0" : "translate-x-0 opacity-100"
-        } transition-all duration-300`}
-      >
-        <div className="flex flex-col justify-center h-screen">
-          {navMenu.map((item, index) => (
-            <div
-              key={item.id}
-              className={`flex justify-end w-full transition-opacity duration-500 ${opened ? "opacity-0 delay-0" : "opacity-100 delay-500"}`}
-              onClick={() => handleClick(index + 1)}
+      <AnimatePresence>
+        {opened && (
+          <motion.div
+            className="fixed inset-0 z-[50] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="absolute inset-0 bg-black bg-opacity-50" />
+            <motion.div
+              className="flex flex-col justify-center items-end pr-16 h-screen"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.3 }}
             >
-              <p className="md:text-2xl py-2 pr-8 font-semibold hover:bg-gray-50 hover:text-gray-800 cursor-pointer duration-300 w-full md:w-1/2 text-end">
-                {item.name}
-              </p>
-            </div>
-          ))}
-        </div>
-      </nav>
+              {navMenu.map((item, index) => (
+                <motion.div
+                  key={item.id}
+                  className="w-full md:w-1/2"
+                  custom={index}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={itemVariants}
+                  onClick={() => handleClick(index + 1)}
+                >
+                  <p className="text-lg md:text-2xl py-2 font-semibold text-end hover:text-yellow-400 cursor-pointer transform hover:scale-105 transition duration-300">
+                    {item.name}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
