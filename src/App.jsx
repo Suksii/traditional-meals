@@ -4,6 +4,7 @@ import "./App.css";
 import { sections } from "./constants/constants";
 import FondSection from "./components/FondSection";
 import FooterSection from "./components/FooterSection";
+import Navbar from "./components/Navbar";
 
 function App() {
   const sectionRefs = useRef([]);
@@ -80,6 +81,7 @@ function App() {
       <div className="absolute bottom-0 left-0 w-full z-50">
         <FooterSection />
       </div>
+      <Navbar sectionRefs={sectionRefs} setCurrentIndex={setCurrentIndex} />
       <div
         className="w-full overflow-y-auto"
         onWheel={handleWheel}

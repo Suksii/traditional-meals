@@ -36,7 +36,7 @@ export const sections = [
     bgColor: "#ffff",
   },
   {
-    id: "meal-section",
+    id: "note-section",
     section: (
       <Meals
         title={"Specifična nota bošnjačkih jela"}
