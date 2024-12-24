@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Bakery = ({
   title = "",
@@ -9,32 +10,59 @@ const Bakery = ({
 }) => {
   return (
     <div className="md:min-h-screen flex flex-col justify-center gap-8 p-6 lg:w-3/4 mx-auto mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+      <motion.h2
+        className="text-2xl font-bold text-gray-800 mb-4 text-center"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         {title}
-      </h2>
+      </motion.h2>
       {descriptions &&
         descriptions.length > 0 &&
         descriptions.map((description) => (
-          <p className="text-lg" key={description.id}>
+          <motion.p
+            className="text-lg"
+            key={description.id}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
             {description.description}
-          </p>
+          </motion.p>
         ))}
       {list && list.length > 0 && (
         <>
-          <h2 className="text-lg">{subtitle}</h2>
+          <motion.h2
+            className="text-lg"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            {subtitle}
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {list.map((description) => (
-              <p className="text-lg" key={description.id}>
+              <motion.p
+                className="text-lg"
+                key={description.id}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.3 }}
+              >
                 {description.description}
-              </p>
+              </motion.p>
             ))}
           </div>
         </>
       )}
-      <div
+      <motion.div
         className={`grid grid-cols-1 sm:grid-cols-2 ${
           images.length % 3 === 0 ? "lg:grid-cols-3" : ""
         } ${images.length % 4 === 0 ? "lg:grid-cols-4" : ""} gap-6`}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.7 }}
       >
         {images &&
           images.map((image, index) => (
@@ -50,7 +78,7 @@ const Bakery = ({
               </div>
             </div>
           ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
