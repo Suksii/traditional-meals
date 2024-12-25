@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Navbar = ({ sectionRefs, setCurrentIndex }) => {
+const Navbar = ({ sectionRefs, setCurrentIndex, currentIndex }) => {
   const navMenu = [
     { id: "note-section", name: "Specifična nota bošnjačkih jela" },
     { id: "kebab-section", name: "Tipični sastojci bošnjačke kuhinje" },
@@ -90,7 +90,13 @@ const Navbar = ({ sectionRefs, setCurrentIndex }) => {
                   variants={itemVariants}
                   onClick={() => handleClick(index + 1)}
                 >
-                  <p className="text-lg md:text-2xl py-2 font-semibold text-end hover:text-yellow-400 cursor-pointer transform hover:scale-105 transition duration-300">
+                  <p
+                    className={`text-lg md:text-2xl py-2 font-semibold text-end ${
+                      currentIndex === index + 1
+                        ? "text-yellow-400 scale-105"
+                        : ""
+                    } hover:text-yellow-400 cursor-pointer transform hover:scale-105 transition duration-300`}
+                  >
                     {item.name}
                   </p>
                 </motion.div>

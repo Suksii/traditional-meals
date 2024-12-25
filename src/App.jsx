@@ -84,7 +84,11 @@ function App() {
           Sajt izradio: <span className="font-semibold">Jašar Ćatović</span>
         </div>
       </div>
-      <Navbar sectionRefs={sectionRefs} setCurrentIndex={setCurrentIndex} />
+      <Navbar
+        sectionRefs={sectionRefs}
+        setCurrentIndex={setCurrentIndex}
+        currentIndex={currentIndex}
+      />
       <div
         className="w-full overflow-y-auto"
         onWheel={handleWheel}
