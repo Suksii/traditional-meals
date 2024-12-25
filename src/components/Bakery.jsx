@@ -7,17 +7,26 @@ const Bakery = ({
   images = [],
   list = [],
   subtitle = "",
+  publishedAt = "",
 }) => {
   return (
     <div className="md:min-h-screen flex flex-col justify-center gap-8 p-6 lg:w-3/4 mx-auto mb-10">
       <motion.h2
-        className="text-2xl font-bold text-gray-800 mb-4 text-center"
+        className="text-2xl font-bold text-gray-800 text-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         {title}
       </motion.h2>
+      <motion.p
+        className="text-sm text-gray-500 mb-4 italic"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        Objavljeno: {publishedAt}
+      </motion.p>
       {descriptions &&
         descriptions.length > 0 &&
         descriptions.map((description) => (

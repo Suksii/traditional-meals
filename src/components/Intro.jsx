@@ -5,7 +5,7 @@ import BgImage from "../assets/bg-image.jpg";
 const Intro = () => {
   return (
     <div
-      className="min-h-screen bg-blue-100 w-full flex flex-col justify-center items-center bg-no-repeat bg-cover relative"
+      className="min-h-screen pt-20 md:pt-0 bg-blue-100 w-full flex flex-col justify-center items-center bg-no-repeat bg-cover relative"
       style={{ backgroundImage: `url(${BgImage})` }}
     >
       <motion.div

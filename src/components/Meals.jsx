@@ -1,7 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Meals = ({ title = "", descriptions = [], image, list = [] }) => {
+const Meals = ({
+  title = "",
+  descriptions = [],
+  image,
+  list = [],
+  publishedAt = "",
+}) => {
   return (
     <div className="md:min-h-screen flex flex-col justify-center gap-8 p-6 lg:w-3/4 mx-auto">
       <div className="flex flex-col md:flex-row items-center gap-8">
@@ -33,7 +39,12 @@ const Meals = ({ title = "", descriptions = [], image, list = [] }) => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">{title}</h1>
+          <div>
+            <h1 className="text-2xl font-bold text-gray-800">{title}</h1>
+            <p className="text-sm text-gray-500 mb-4 italic">
+              Objavljeno: {publishedAt}
+            </p>
+          </div>
           {descriptions &&
             descriptions.slice(0, 3).map((description) => (
               <p className="text-lg" key={description.id}>

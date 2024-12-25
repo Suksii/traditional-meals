@@ -80,6 +80,9 @@ function App() {
       </div>
       <div className="absolute bottom-0 left-0 w-full z-50">
         <FooterSection />
+        <div className="text-center text-gray-800 pb-2">
+          Sajt izradio: <span className="font-semibold">Jašar Ćatović</span>
+        </div>
       </div>
       <Navbar sectionRefs={sectionRefs} setCurrentIndex={setCurrentIndex} />
       <div

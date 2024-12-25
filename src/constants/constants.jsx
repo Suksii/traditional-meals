@@ -40,6 +40,7 @@ export const sections = [
     section: (
       <Meals
         title={"Specifična nota bošnjačkih jela"}
+        publishedAt="12. oktobar 2024."
         descriptions={[
           {
             id: 1,
@@ -81,6 +82,7 @@ export const sections = [
     section: (
       <Meals
         title={"Tipični sastojci bošnjačke kuhinje"}
+        publishedAt="19. oktobar 2024."
         descriptions={[
           {
             id: 1,
@@ -123,6 +125,7 @@ export const sections = [
     section: (
       <Meals
         title={"Pojedinačne i još neke karakteristike bošnjačke kuhinje"}
+        publishedAt="19. oktobar 2024."
         list={[
           {
             id: 1,
@@ -201,6 +204,7 @@ export const sections = [
     section: (
       <Meals
         title="Bosanska kahva – nezaobilazna kod Bošnjaka u svakodnevnoj upotrebi"
+        publishedAt="26. oktobar 2024."
         descriptions={[
           {
             id: 1,
@@ -227,6 +231,7 @@ export const sections = [
     section: (
       <Bakery
         title={"Hljeb, pogače, peciva"}
+        publishedAt="26. oktobar 2024."
         descriptions={[
           {
             id: 1,
@@ -285,6 +290,7 @@ export const sections = [
     section: (
       <Meals
         title="Čorbe"
+        publishedAt="2. novembar 2024."
         descriptions={[
           {
             id: 1,
@@ -306,6 +312,7 @@ export const sections = [
     section: (
       <Bakery
         title={"Pite"}
+        publishedAt="2. novembar 2024."
         descriptions={[
           {
             id: 1,
@@ -341,6 +348,7 @@ export const sections = [
     section: (
       <Meals
         title="Jardum"
+        publishedAt="9. novembar 2024."
         descriptions={[
           {
             id: 1,
@@ -362,6 +370,7 @@ export const sections = [
     section: (
       <Meals
         title="Paprike u Jardumu"
+        publishedAt="9. novembar 2024."
         descriptions={[
           {
             id: 1,
@@ -383,6 +392,7 @@ export const sections = [
     section: (
       <Meals
         title="Evo još nekoliko tradicionalnih jela sa istaknutim receptima bošnjačkog naroda"
+        publishedAt="16. novembar 2024."
         descriptions={[
           {
             id: 1,
@@ -440,6 +450,7 @@ export const sections = [
     section: (
       <Meals
         title="Rožajska kuhinja bošnjačkog življa"
+        publishedAt="16. novembar 2024."
         descriptions={[
           {
             id: 1,
@@ -466,6 +477,7 @@ export const sections = [
     section: (
       <Meals
         title="Kačamak"
+        publishedAt="23. novembar 2024."
         descriptions={[
           {
             id: 1,
@@ -513,6 +525,7 @@ export const sections = [
     section: (
       <Meals
         title="Tradicionalna jela ispod sača"
+        publishedAt="23. novembar 2024."
         descriptions={[
           {
             id: 1,
@@ -539,6 +552,7 @@ export const sections = [
     section: (
       <Bakery
         title={"Prirpema sira kod sandžačkih Bošnjaka"}
+        publishedAt="30. novembar 2024."
         descriptions={[
           {
             id: 1,
@@ -573,6 +587,7 @@ export const sections = [
     section: (
       <Bakery
         title={"Slatka jela kod bošnjačkog naroda"}
+        publishedAt="30. novembar 2024."
         subtitle={
           "Bošnjačka tradicionalna kuhinja obiluje slatkim jelima. Neka od njih su: "
         }
