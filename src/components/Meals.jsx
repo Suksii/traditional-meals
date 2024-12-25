@@ -17,8 +17,11 @@ const Meals = ({ title = "", descriptions = [], image, list = [] }) => {
             className="w-full h-auto rounded-lg shadow-lg"
           />
           <div className="absolute inset-0 bg-black opacity-30 hover:bg-opacity-0 rounded-lg duration-300"></div>
-          <div className="absolute bottom-0 py-2 bg-gray-600 bg-opacity-70 text-gray-50 font-semibold rounded-b-lg w-full text-center">
-            {image.desc}
+          <div className="absolute bottom-0 w-full bg-gradient-to-t from-black via-black to-transparent text-white p-2 text-center rounded-b-lg">
+            <p className="font-semibold">{image.desc}</p>
+            <p className="text-sm text-gray-300 mt-1">
+              Fotografisao: {image.author}
+            </p>
           </div>
         </motion.div>
 

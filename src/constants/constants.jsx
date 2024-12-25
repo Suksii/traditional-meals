@@ -71,10 +71,10 @@ export const sections = [
           src: traditionalMeals,
           alt: "Jela iz bošnjačke kuhinje",
           desc: "Jela iz bošnjačke kuhinje",
+          author: "Muhamed Skorupan",
         }}
       />
     ),
-    bgColor: "#ccccc",
   },
   {
     id: "kebab-section",
@@ -112,6 +112,7 @@ export const sections = [
           src: Kebab,
           alt: "Ćevapi",
           desc: "Fotografisano u jednoj od novih podgoričkih ćevabdžinica",
+          author: "Muhamed Skorupan",
         }}
       />
     ),
@@ -188,6 +189,7 @@ export const sections = [
           src: Sofra,
           alt: "Bošnjačka sofra",
           desc: "Bošnjačka sofra",
+          author: "Muhamed Skorupan",
         }}
       />
     ),
@@ -215,6 +217,7 @@ export const sections = [
           src: Kahva,
           alt: "Bosanska kahva",
           desc: "Bosanska kahva, na slici fildžan (džezva) i šoljice",
+          author: "Muhamed Skorupan",
         }}
       />
     ),
@@ -241,31 +244,37 @@ export const sections = [
             image: domacaLepinja,
             alt: "Domaća lepinja",
             desc: "Domaća lepinja",
+            author: "Muhamed Skorupan",
           },
           {
             image: domaceKifle,
             alt: "Domaće kifle",
             desc: "Domaće kifle",
+            author: "Muhamed Skorupan",
           },
           {
             image: domaciHleb,
             alt: "Domaći hleb",
             desc: "Domaći hleb",
+            author: "Muhamed Skorupan",
           },
           {
             image: Simit,
             alt: "Simit",
             desc: "Simit",
+            author: "Muhamed Skorupan",
           },
           {
             image: lepinjaUrerni,
             alt: "Lepinja u rerni",
             desc: "Domaća lepinja u rerni",
+            author: "Muhamed Skorupan",
           },
           {
             image: lepinjaUrerni2,
             alt: "Lepinja u rerni ",
             desc: "Domaća lepinja u rerni",
+            author: "Muhamed Skorupan",
           },
         ]}
       />
@@ -283,7 +292,12 @@ export const sections = [
               "Čorbe u svakodnevnoj tradicionalnoj ishrani Bošnjaka, čorbe zauzimaju značajno mjesto. Za razliku od blagih supa, obično se prave jače začinjene, s više masnoće, guste i hranjive, najčešće sa mesom ili sa jačim dodacima, kao što su povrće, tjestenina, jaja i slično. Iako se obavezno jedu uz glavno jelo, prije ili poslije glavnog jela , čorbe egzistiraju i kao samostalna jela, koja se uzimaju za doručak. Tada se, po pravilu, stavljaju  nagusto, od komadića mesa, priređene na mnogobrojne načine: s telećim goveđim, jagnjećim ili kokošijim mesom izmiješanim s bamijom i povrćem, tjesteninom i rižom i obavezno začinjenim raznim mirođijama i uzavrelim mladim maslom.",
           },
         ]}
-        image={{ src: Soup, alt: "Begova čorba", desc: "Begova čorba" }}
+        image={{
+          src: Soup,
+          alt: "Begova čorba",
+          desc: "Begova čorba",
+          author: "Muhamed Skorupan",
+        }}
       />
     ),
   },
@@ -304,16 +318,19 @@ export const sections = [
             image: CheesePie,
             alt: "Pita sa sirom - sirnica",
             desc: "Pita sa sirom - sirnica",
+            author: "Muhamed Skorupan",
           },
           {
             image: CheesePie2,
             alt: "Pita sa sirom - sirnica",
             desc: "Pita sa sirom - sirnica",
+            author: "Muhamed Skorupan",
           },
           {
             image: GreensPie,
             alt: "Pita sa zeljem - zeljanuša",
             desc: "Pita sa zeljem - zeljanuša",
+            author: "Muhamed Skorupan",
           },
         ]}
       />
@@ -335,6 +352,7 @@ export const sections = [
           src: Jardum,
           alt: "Jardum",
           desc: "Jardum",
+          author: "Muhamed Skorupan",
         }}
       />
     ),
@@ -355,6 +373,7 @@ export const sections = [
           src: JardumPaprike,
           alt: "Paprike u Jardumu",
           desc: "Paprike u Jardumu",
+          author: "Muhamed Skorupan",
         }}
       />
     ),
@@ -411,6 +430,7 @@ export const sections = [
           src: Jufke,
           alt: "Jufke",
           desc: "Priprema Jufki",
+          author: "Muhamed Skorupan",
         }}
       />
     ),
@@ -436,6 +456,7 @@ export const sections = [
           src: Jufke1,
           alt: "Jufke sa suhim mesom",
           desc: "Jufke sa suhim mesom",
+          author: "Muhamed Skorupan",
         }}
       />
     ),
@@ -452,7 +473,12 @@ export const sections = [
               "U provrelu vodu staviti kukuruzno brašno i posoliti po želji, zatim kuhati na jačoj vatri da kljuća pola sata. Na kraju oklagijom dobro izmiješati tako da tijesto kačamaka postane ujednačeno i meko. Kačamak se servira u tepsiji i začinjava pripremljenom smješom od pomiješanog masla i kajmaka, a uz njega se služi gusto kisjelo mlijeko.",
           },
         ]}
-        image={{ src: Kacamak, alt: "Kačamak", desc: "Kačamak" }}
+        image={{
+          src: Kacamak,
+          alt: "Kačamak",
+          desc: "Kačamak",
+          author: "Muhamed Skorupan",
+        }}
       />
     ),
   },
@@ -477,6 +503,7 @@ export const sections = [
           src: Cevap,
           alt: "Ćevap na roštilju",
           desc: "Ćevap na roštilju",
+          author: "Muhamed Skorupan",
         }}
       />
     ),
@@ -498,7 +525,12 @@ export const sections = [
               "Važno je naglasiti da treba pratiti uopštena sadržajna  uputstva za pripremu jela ispod sača-peke te upute za čišćenje i održavanje sača. Jako je  važno odabrati sigurno mjesto za loženje vatre te zaštitu od vjetra kako bi se osigurala uspješna priprema hrane pod sačem. Nema dileme jela ispod sača su daleko ukusnija od svih jer se spremaju na gotovo prastari način.",
           },
         ]}
-        image={{ src: Sac, alt: "Priprema sača", desc: "Priprema sača" }}
+        image={{
+          src: Sac,
+          alt: "Priprema sača",
+          desc: "Priprema sača",
+          author: "Muhamed Skorupan",
+        }}
       />
     ),
   },
@@ -524,11 +556,13 @@ export const sections = [
             image: DomaciSir,
             alt: "Domaći sir",
             desc: "Domaći sir",
+            author: "Muhamed Skorupan",
           },
           {
             image: DomaciSir1,
             alt: "Domaći sir, krompir, sok I razna peciva",
             desc: "Domaći sir, krompir, sok I razna peciva",
+            author: "Muhamed Skorupan",
           },
         ]}
       />
@@ -597,21 +631,25 @@ export const sections = [
             image: Halva,
             alt: "Halva",
             desc: "Halva",
+            author: "Muhamed Skorupan",
           },
           {
             image: Hurmasice,
             alt: "Hurmašice",
             desc: "Hurmašice",
+            author: "Muhamed Skorupan",
           },
           {
             image: Baklave,
             alt: "Baklave",
             desc: "Razne vrste baklava",
+            author: "Muhamed Skorupan",
           },
           {
             image: Tolumbe,
             alt: "Tolumbe",
             desc: "Tolumbe",
+            author: "Muhamed Skorupan",
           },
         ]}
       />
