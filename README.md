@@ -13,3 +13,11 @@ This project is a web application built with React.js, design to present traditi
  
 - **JavaScript:** , window.open, window.innerHeight, setTimeout, map, forEach, slice, window.addEventListener, window.removeEventListener, document.body.classList, event (deltaY, preventDefaults())
 - IntersectionObserver
+
+## Installation
+1. Create a folder on the desktop: `mkdir MyProject`
+2. Navigate to the desktop folder: `cd %USERPROFILE%/Desktop/MyProject`
+3. Clone the repository: `git clone "https://github.com/Suksii/traditional-meals.git"`
+4. Find the location: `cd traditional-meals`
+5. Install dependencies: `npm install`
+6. Run the application: `npm run dev`
